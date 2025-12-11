@@ -41,7 +41,10 @@ const ComplaintForm = () => {
 
     return (
         <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-xl mt-10 relative">
-            <button onClick={handleLogout} className="absolute top-6 right-6 text-sm text-red-600 hover:underline">Logout</button>
+            <div className="absolute top-6 right-6 flex gap-4">
+                <button onClick={() => navigate('/profile')} className="text-sm text-blue-600 hover:underline font-semibold">My Profile</button>
+                <button onClick={handleLogout} className="text-sm text-red-600 hover:underline">Logout</button>
+            </div>
             <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 mb-6">Report a Violation</h2>
 
             {message && <div className="mb-4 p-3 bg-blue-100 text-blue-700 rounded">{message}</div>}

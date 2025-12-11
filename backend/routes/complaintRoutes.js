@@ -12,9 +12,20 @@ router.post('/', auth, async (req, res) => {
             category,
             description,
             location,
+            user: req.user.id
         });
         const savedComplaint = await newComplaint.save();
         res.status(201).json(savedComplaint);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+// GET: Fetch User's Own Complaints
+router.get('/my-complaints', auth, async (req, res) => {
+    try {
+        const complaints = await Complaint.find({ user: req.user.id }).sort({ createdAt: -1 });
+        res.json(complaints);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }

@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './components/Login';
 import ComplaintForm from './components/ComplaintForm';
+import UserProfile from './components/UserProfile';
 import AdminDashboard from './components/AdminDashboard';
 import { AuthProvider, useAuth } from './context/AuthContext';
 
@@ -31,6 +32,14 @@ function AppRoutes() {
         element={
           <PrivateRoute roleRequired="user">
             <ComplaintForm />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/profile"
+        element={
+          <PrivateRoute roleRequired="user">
+            <UserProfile />
           </PrivateRoute>
         }
       />
