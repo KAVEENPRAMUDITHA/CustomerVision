@@ -1,4 +1,4 @@
-# CustomCare.lk - Consumer Complaint Management System
+# CustomerVision.lk - Consumer Complaint Management System
 
 A full-stack web application for managing consumer complaints with location-based tracking and admin dashboard capabilities. Users can submit complaints about shops/businesses, and administrators can review and manage them through an interactive map interface.
 
@@ -501,7 +501,7 @@ ISC License - See LICENSE file for details
 
 For issues and questions:
 - Create an issue on GitHub
-- Contact: support@customcare.lk
+- Contact: pramudithakaveen51@gmail.com
 
 ---
 
